@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width. initial-scale=1.0"/>
+        <title>HTMl and CSS Fundamentals</title>
+        <link rel="stylesheet" href="./htmlCssDocumentationPageStyles.css"/>
+    </head>
+    <body>
+        <main id="main-doc">
+            <nav id="navbar">
+                <header>HTML and CSS Fundamentals</header>
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#Introduction">Introduction</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Html_basics">HTML Basics</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Css_basics">CSS Basics</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Css_layout_and_positioning">CSS Layout and Positioning</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Responsive_design_and_media_queries">Responsive Design and Media Queries</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#References">References</a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article>
+                    <h1>What is HTML</h1>
+                    <p>
+                        HTML (HyperText Markup Language) is the standard markup language used to create web pages.
+                        It provides the structrue of a webpage by using elements (tags) to define the different parts of a page
+                        such as heading, paragraphs, links, images, and more.
+                    </p>
+                    <h1>What is CSS</h1>
+                    <p>
+                        CSS (Cascading Style Sheets) is used to style and layout web pages.
+                        It controls the color, font, spacing, positioning, and responsiveness of HTML elements, 
+                        ensuring an aesthetically pleasing and functional design.
+                    </p>
+                    <h1>How HTML and CSS Work Together</h1>
+                    <p>
+                        HTML structures the content, while CSS enhances its presentation. 
+                        Without CSS, HTML pages appear as plain text and images. 
+                        Combining them allows for visually engaging web pages with structured layouts and responsive designs.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Html_basics">
+                <header>HTML Basics</header>
+                <article>
+                    <h1>HTML Structure</h1>
+                    <p>Every HTML document has a basic structure.</p>
+                    <pre>
+                        <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;Page Title&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;h1&gt;This is a Heading&lt;/h1&gt;
+                                &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                        </code>
+                    </pre>
+                    
+                    <ul>
+                        <li><code>&lt;!DOCTYPE html&gt;</code> declares the document type</li>
+                        <li><code>&lt;html&gt;</code> is the root element of an HTML page</li>
+                        <li><code>&lt;head&gt;</code> contains meta information about the document</li>
+                    </ul>
+            
+                    <h1>Common HTML Elements</h1>
+            
+                    <ul>
+                        <li><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> headings</li>
+                        <li><code>&lt;p&gt;</code> paragraphs</li>
+                        <li><code>&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;</code> to create hyperlinks</li>
+                        <li><code>&lt;img src="image.jpg alt="Description"&gt;</code> images</li>
+                        <li><code>&lt;div&gt;</code> for layout sections</li>
+                        <li><code>&lt;span&gt;</code> for inline styling</li>
+                    </ul>
+                
+                    <h1>Lists</h1>
+
+                    <p>In HTML, there are two main types of lists: unordered and ordered. The difference lies in how the items are presented. Here’s an explanation of each type:</p>
+
+                    <h2>Unordered List</h2>
+                    <p>An unordered list is used to display a list of items in no particular order. 
+                        It is typically represented with bullet points.
+                    </p>
+                    <ul>
+                        <li><code>&lt;ul&gt;</code>: Defines an unordered list.</li>
+                        <li><code>&lt;li&gt;</code>: Defines each list item within the unordered list.</li>
+                    </ul>
+
+                    <p>Here is an example of an unordered list:</p>
+
+                    <pre>
+                        <code>
+                        &lt;ul&gt;
+                            &lt;li&gt;Item 1&lt;/li&gt;
+                            &lt;li&gt;Item 2&lt;/li&gt;
+                            &lt;li&gt;Item 3&lt;/li&gt;
+                        &lt;/ul&gt;
+                        </code>
+                    </pre>
+
+                    <h2>Ordered List</h2>
+                    <p>An ordered list is used to display a list of items in a specific, numbered order. Each item is numbered by default.</p>
+                    <ul>
+                        <li><code>&lt;ol&gt;</code>: Defines an ordered list.</li>
+                        <li><code>&lt;li&gt;</code>: Defines each list item within the ordered list.</li>
+                    </ul>
+
+                    <p>Here is an example of an ordered list:</p>
+
+                    <pre>
+                        <code>
+                        &lt;ol&gt;
+                            &lt;li&gt;First&lt;/li&gt;
+                            &lt;li&gt;Second&lt;/li&gt;
+                            &lt;li&gt;Third&lt;/li&gt;
+                        &lt;/ol&gt;
+                        </code>
+                    </pre>
+                    <h1>Tables</h1>
+                    <p>The <code>&lt;table&gt;</code> element is used to represent tabular data. 
+                        It contains rows and columns to display data in a grid-like format. 
+                        The following tags are typically used inside a table:</p>
+
+                        <ul>
+                            <li><code>&lt;table&gt;</code>: Defines the table itself.</li>
+                            <li><code>&lt;caption&gt;</code>: Provides a title or description for the table.</li>
+                            <li><code>&lt;thead&gt;</code>: Groups the header content in the table. It typically contains the column headings.</li>
+                            <li><code>&lt;tr&gt;</code>: Represents a row in the table.</li>
+                            <li><code>&lt;th&gt;</code>: Defines a header cell in the table. It’s usually bold and centered by default.</li>
+                            <li><code>&lt;tbody&gt;</code>: Groups the main content of the table (the body). It typically contains the rows of data.</li>
+                            <li><code>&lt;td&gt;</code>: Defines a cell of data inside the table rows.</li>
+                        </ul>
+                        
+                        <p>Here is an example of a simple table:</p>
+                    <pre>
+                        <code>
+                        &lt;table&gt;
+                            &lt;caption&gt;Sample Table&lt;/caption&gt;
+                            &lt;thead&gt;
+                                &lt;tr&gt;
+                                    &lt;th&gt;Header 1&lt;/th&gt;
+                                    &lt;th&gt;Header 2&lt;/th&gt;
+                                    &lt;th&gt;Header 3&lt;/th&gt;
+                                &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+                                    &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+                                    &lt;td&gt;Row 1, Cell 3&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+                                    &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+                                    &lt;td&gt;Row 2, Cell 3&lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                        </code>
+                    </pre>
+                    <h1>Forms</h1>
+                    <p>Forms are used to collect user input. They can contain various input elements such as
+                         text fields, checkboxes, radio buttons, and more. The <code>&lt;form&gt;</code> element is used 
+                         to create a form, and the following tags are commonly used inside a form:
+                    </p>
+                    <ul>
+                        <li><code>&lt;form&gt;</code>: This tag defines the tag itself. It can include attributes 
+                            such as action (the URL where the form data should be sent) and method 
+                            (the HTTP method to use, such as GET or POST).
+                        </li>
+                             and method to specify where the form data should be sent and how it should be processed.</li>
+                        <li><code>&lt;input&gt;</code>: Represents an input field where users can enter data.
+                            The type attribute specifies the type of input, such as text, password, checkbox, radio, etc.
+                        </li>
+                        <li><code>&lt;label&gt;</code>: Provides a label for an input field. 
+                            It improves accessibility by associating the label with the corresponding input field.
+                        </li>
+                        <li><code>&lt;textarea&gt;</code>: This tag creates a multi-line text input field, 
+                            allowing users to enter larger amounts of text.
+                        </li>
+                        <li><code>&lt;button&gt;</code>: Creates a clickable button, which can be used to
+                            submit the form or trigger other actions.</li>
+                        <li><code>&lt;select&gt;</code>: Defines a drop-down list, allowing users
+                            to select one or more options from a list which are inserted using the &lt;option&gt; tag.</li>
+                    </ul>
+                    <p>Here is an example of a simple form:</p>
+                    <pre>
+                        <code>
+                        &lt;form action="/submit-form" method="post"&gt;
+                            &lt;label for="name"&gt;Name:&lt;/label&gt;
+                            &lt;input type="text" id="name" name="name" required&gt;
+                            &lt;label for="email"&gt;Email:&lt;/label&gt;
+                            &lt;input type="email" id="email" name="email" required&gt;
+                            &lt;label for="message"&gt;Message:&lt;/label&gt;
+                            &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+                            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+                        &lt;/form&gt;
+                        </code>
+                    </pre>
+                    <h1>Semantic HTML</h1>
+                    <p>
+                        Semantic HTML refers to the use of HTML markup that conveys meaning about the content contained
+                         within. By using semantic elements, developers can create more meaningful and accessible web pages. 
+                         Semantic HTML helps search engines and assistive technologies understand the structure and context of the content, 
+                         improving SEO and accessibility.
+                    </p>
+                    <p>Some common semantic elements include:</p>
+                    <ul>
+                        <li><code>&lt;header&gt;</code>: Represents introductory content at the beginning of a section or page.</li>
+                        <li><code>&lt;nav&gt;</code>: Contains navigation links to other pages or sections of the same page.</li>
+                        <li><code>&lt;main&gt;</code>: Contains the main content of the page.</li>
+                        <li><code>&lt;article&gt;</code>: Represents an independent piece of content that can stand alone.</li>
+                        <li><code>&lt;section&gt;</code>: Defines a thematic grouping of content, typically with a heading.</li>
+                        <li><code>&lt;footer&gt;</code>: Contains footer information such as copyright, contact information, etc.</li>
+                </article>
+            </section>
+            <section class="main-section" id="Css_basics">
+                <header>CSS Basics</header>
+                <article>
+                    <h1>CSS Syntax</h1>
+                    <p>CSS (Cascading Style Sheets) uses a syntax that consists of a selector and a declaration block. 
+                        The selector targets the HTML element you want to style, and the declaration block contains the 
+                        property-value pairs that define the style. Here’s an example of CSS syntax:</p>
+                    <pre>
+                        <code>
+                        selector {
+                            property: value;
+                        }
+                        </code>
+                    </pre>
+                    <p>For example, to change the color of all <code>&lt;p&gt;</code> elements to red, you would write:</p>
+                    <pre>
+                        <code>
+                        p {
+                            color: red;
+                        }
+                        </code>
+                    </pre>
+                    <h1>Common CSS Properties</h1>
+                    <p>CSS properties define how HTML elements are displayed on a webpage. 
+                        Here are some common CSS properties and their uses:</p>
+                    <ul>
+                        <li><code>color</code>: Sets the color of text.</li>
+                        <li><code>font-size</code>: Sets the size of the font.</li>
+                        <li><code>background-color</code>: Sets the background color of an element.</li>
+                        <li><code>margin</code>: Sets the margin around an element.</li>
+                        <li><code>padding</code>: Sets the padding inside an element.</li>
+                        <li><code>border</code>: Sets the border around an element.</li>
+                        <li><code>display</code>: Specifies how an element is displayed.</li>
+                        <li><code>position</code>: Specifies the positioning method of an element.</li>
+                    </ul>
+                    <h1>CSS Selectors</h1>
+                    <p>CSS selectors are used to target specific HTML elements for styling. 
+                        There are several types of selectors, including:</p>
+                    <ul>
+                        <li>Element Selector: Targets all instances of a specific HTML element,
+                            eg. <code>h1 { color: blue; }</code>
+                        </li>
+                        <li>Class Selector: Targets elements with a specific class attribute, eg. <code>.title { font-size: 24px; }</code></li>
+                        <li>ID Selector: Targets an element with a specific ID attribute, eg. <code>#header { background-color: black; }</code></li>
+                        <li>Universal Selector: Targets all elements on a page, eg. <code>* { margin: 0; }</code></li>
+                        <li>Descendant Selector: Targets an element that is a descendant of another element, eg. <code>div p { color: red; }</code></li>
+                        <li>Pseudo-class Selector: Targets elements based on their state or position, eg. <code>a:hover { text-decoration: underline; }</code></li>
+                        <li>Pseudo-element Selector: Targets specific parts of an element, eg. <code>p::first-line { font-weight: bold; }</code></li>
+                        <li>Attribute Selector: Targets elements based on their attributes, eg. <code>input[type="text"] { border: 1px solid black; }</code></li>
+                        <li>Grouping Selector: Targets multiple selectors at once, eg. <code>h1, h2, h3 { color: blue; }</code></li>
+                        <li>Child Selector: Targets an element that is a direct child of another element, eg. <code>ul &gt; li { list-style-type: none; }</code></li>
+                    </ul>
+                    <h1>CSS Units</h1>
+                    <p>CSS uses various units for measurements, including:</p>
+                    <ul>
+                        <li><code>px</code>: Pixels, an absolute unit.</li>
+                        <li><code>em</code>: Relative to the font-size of the element.</li>
+                        <li><code>rem</code>: Relative to the font-size of the root element.</li>
+                        <li><code>%</code>: Percentage of the parent element.</li>
+                        <li><code>vh</code> and <code>vw</code>: Relative to the viewport height and width.</li>
+                    </ul>
+
+                    <h1>CSS Colors</h1>
+                    <p>Colors in CSS can be defined using:</p>
+                    <ul>
+                        <li>Named colors (e.g., <code>red</code>)</li>
+                        <li>Hexadecimal (e.g., <code>#ff0000</code>)</li>
+                        <li>RGB (e.g., <code>rgb(255, 0, 0)</code>)</li>
+                        <li>RGBA (e.g., <code>rgba(255, 0, 0, 0.5)</code>)</li>
+                        <li>HSL (e.g., <code>hsl(0, 100%, 50%)</code>)</li>
+                    </ul>
+                    <h1>CSS Box Model</h1>
+                    <p>The CSS box model is a fundamental concept in web design that defines the structure of elements on a webpage. 
+                        It consists of four parts: content, padding, border, and margin. 
+                        Understanding the box model is essential for creating layouts and styling elements effectively.</p>
+                    <ul>
+                        <li>Content: The actual content of the element, such as text or images.</li>
+                        <li>Padding: The space between the content and the border.</li>
+                        <li>Border: The border around the padding and content.</li>
+                        <li>Margin: The space between the border and other elements on the page.</li>
+                    </ul>
+                    <p>Here is an example of the box model:</p>
+                    <pre>
+                        <code>
+                        .box {
+                            width: 200px;
+                            height: 200px;
+                            padding: 20px;
+                            border: 1px solid black;
+                            margin: 10px;
+                        }
+                        </code>
+                    </pre>
+                </article>
+            </section>
+            <section class="main-section" id="Css_layout_and_positioning">
+                <header>CSS Layout and Positioning</header>
+                <article>
+                    <h1>CSS Layout Techniques</h1>
+                    <p>CSS provides several techniques for creating layouts on web pages. Two of the most popular methods are Flexbox and CSS Grid.</p>
+            
+                    <h2>Flexbox</h2>
+                    <p>Flexbox (Flexible Box Layout) is a one-dimensional layout model that allows you to design a layout structure in a more efficient way than traditional methods. It is particularly useful for aligning items in a row or column.</p>
+                    <p>Here’s an example of a simple navigation bar using Flexbox:</p>
+                    <pre>
+                        <code>
+                        .nav-container {
+                            display: flex;
+                            justify-content: space-around; /* Distributes space evenly between items */
+                            align-items: center; /* Centers items vertically */
+                            background-color: #333;
+                            padding: 10px;
+                        }
+            
+                        .nav-item {
+                            color: white;
+                            text-decoration: none;
+                            padding: 10px 20px;
+                        }
+            
+                        .nav-item:hover {
+                            background-color: #555; /* Changes background on hover */
+                        }
+                        </code>
+                    </pre>
+                    <p>HTML structure for the navigation bar:</p>
+                    <pre>
+                        <code>
+                        &lt;div class="nav-container"&gt;
+                            &lt;a href="#" class="nav-item"&gt;Home&lt;/a&gt;
+                            &lt;a href="#" class="nav-item"&gt;About&lt;/a&gt;
+                            &lt;a href="#" class="nav-item"&gt;Services&lt;/a&gt;
+                            &lt;a href="#" class="nav-item"&gt;Contact&lt;/a&gt;
+                        &lt;/div&gt;
+                        </code>
+                    </pre>
+            
+                    <h2>CSS Grid</h2>
+                    <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex layouts easily. It enables you to define rows and columns, and place items within that grid.</p>
+                    <p>Here’s an example of a simple photo gallery using CSS Grid:</p>
+                    <pre>
+                        <code>
+                        .gallery-container {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Creates responsive columns */
+                            grid-gap: 10px; /* Space between grid items */
+                        }
+            
+                        .gallery-item {
+                            background-color: #eee;
+                            padding: 20px;
+                            text-align: center;
+                            border: 1px solid #ccc;
+                        }
+                        </code>
+                    </pre>
+                    <p>HTML structure for the photo gallery:</p>
+                    <pre>
+                        <code>
+                        &lt;div class="gallery-container"&gt;
+                            &lt;div class="gallery-item"&gt;Image 1&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 2&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 3&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 4&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 5&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 6&lt;/div&gt;
+                        &lt;/div&gt;
+                        </code>
+                    </pre>
+                    <h1>CSS Positioning</h1>
+                    <p>CSS positioning allows you to control the placement of elements on a webpage. There are several positioning methods:</p>
+                    <ul>
+                        <li><strong>Static</strong>: The default positioning; elements are positioned according to the normal flow of the document.</li>
+                        <li><strong>Relative</strong>: Positioned relative to its normal position. You can use the properties <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> to adjust its position.</li>
+                        <li><strong>Absolute</strong>: Positioned relative to the nearest positioned ancestor (not static). It is removed from the normal document flow.</li>
+                        <li><strong>Fixed</strong>: Positioned relative to the viewport, meaning it stays in the same place even when the page is scrolled.</li>
+                        <li><strong>Sticky</strong>: A hybrid of relative and fixed positioning. It toggles between relative and fixed, depending on the scroll position.</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Responsive_design_and_media_queries">
+                <header>Responsive Design and Media Queries</header>
+                <article>
+                    <h1>Responsive Design</h1>
+                    <p>Responsive design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. The goal is to ensure that users have a good viewing experience, regardless of the device they are using.</p>
+                    <p>To achieve responsive design, it is important to include the following meta tag in the <code>&lt;head&gt;</code> section of your HTML document:</p>
+                    <pre>
+                        <code>
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        </code>
+                    </pre>
+                    <p>This meta tag sets the viewport width to the device's width and sets the initial zoom level to 1.0, ensuring that your layout is responsive on mobile devices.</p>
+                    <p>Responsive design can be achieved through flexible grids, layouts, images, and CSS media queries.</p>
+            
+                    <h1>Media Queries</h1>
+                    <p>Media queries are a powerful feature of CSS that allow you to apply styles based on the characteristics of the device, such as its width, height, orientation, and resolution. This enables you to create responsive designs that adapt to different screen sizes.</p>
+                    <p>The basic syntax of a media query is as follows:</p>
+                    <pre>
+                        <code>
+                        @media (condition) {
+                            /* CSS rules here */
+                        }
+                        </code>
+                    </pre>
+                    <p>For example, to change the background color of a page for screens smaller than 600 pixels, you would write:</p>
+                    <pre>
+                        <code>
+                        @media (max-width: 600px) {
+                            body {
+                                background-color: lightblue;
+                            }
+                        }
+                        </code>
+                    </pre>
+                    <p>You can also combine multiple conditions:</p>
+                    <pre>
+                        <code>
+                        @media (min-width: 600px) and (max-width: 1200px) {
+                            body {
+                                background-color: lightgreen;
+                            }
+                        }
+                        </code>
+                    </pre>
+                    <p>Using media queries, you can adjust styles for different devices, ensuring a consistent and user-friendly experience across all platforms.</p>
+                </article>
+            </section>
+            <section class="main-section" id="References">
+                <header>References</header>
+                <article>
+                    <p>Here are some valuable resources for learning more about HTML, CSS, and web development:</p>
+                    <ul>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - A comprehensive resource for learning web technologies, including HTML, CSS, JavaScript, and more.</li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">MDN Web Docs</a> - A detailed documentation site for web developers, offering guides, tutorials, and references for HTML, CSS, and JavaScript.</li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> - A website dedicated to all things CSS, featuring articles, tutorials, and tips for web design and development.</li>
+                        <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> - A nonprofit organization that offers free coding bootcamps and resources for learning web development, including HTML and CSS.</li>
+                    </ul>
+                </article>
+            </section>
+
+        </main>
+    </body>
+</html>
