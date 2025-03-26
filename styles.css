@@ -1,0 +1,173 @@
+body {
+    margin: 10px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px; 
+}
+
+.main-section {
+    width: calc(100%-240px);
+    margin-left: 250px;
+    padding: 20px;
+}
+
+#navbar {
+    background-color: #1F2A44;
+    border-radius: 18px;
+    width: 240px;
+    height: calc(100% - 20px);
+    position: fixed;
+    z-index: 1;
+    overflow-y: auto;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+}
+
+#navbar header {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 5px;
+    font-weight: bold;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    transition: background-color 0.3s, color 0.3s; 
+    font-size: 14px;
+}
+
+#navbar ul li:last-child a {
+    border-bottom: none;
+}
+
+#navbar a:hover {
+    background-color: #e8ebf7;
+    color: #1F2A44;
+}
+
+.main-section header {
+    background-color: #1F2A44;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 16px; 
+}
+
+h2 {
+    font-size: 14px; 
+}
+
+/* Media Queries */
+@media (max-width: 768px) and (min-width: 481px) {
+    body {
+        font-size: 12px;
+    }
+
+    #navbar header {
+        font-size: 16px;
+    }
+
+    .main-section header {
+        font-size: 14px;
+    }
+
+    #navbar a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 14px; 
+    }
+    
+    h2 {
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 10px;
+    }
+    .main-section {
+        width: 100%;
+        margin: 10px auto;
+        padding: 5px;
+        box-sizing: border-box; /* Keeps padding and border inside the width */
+    }
+    #navbar {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        margin: 10px auto;
+        border-radius: 5px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+    #navbar header {
+        font-size: 14px;
+    }
+
+    .main-section header {
+        font-size: 12px;
+    }
+
+    #navbar a {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 12px; 
+    }
+    
+    h2 {
+        font-size: 10px; 
+    }
+}
+
+pre code {
+    display: block;
+    white-space: pre; /* Keeps indentation as written */
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    color: #2c3e50;
+}
+
+#References ul {    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#References ul a{
+    color: #4d5d84;
+}
+
+#References ul a:visited{
+    color: #7e68b8;
+}
+
+#References ul a:hover{
+    color: #7a93d2;
+}
